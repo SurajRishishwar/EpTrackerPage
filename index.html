@@ -5,13 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EpTracker</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+        th {
+          background-color: #f2f2f2;
+        }
+        #loading {
+            display: none;
+            text-align: center;
+            margin: 20px;
+        }
+      </style>
 </head>
 <body>
     <button id="click">Click</button>
-    <p id="tohide">This is the element which will get hide.....</p>
+    <div id="loading">
+        <img src="loading.gif" alt="Loading..." width="50" height="50">
+        <!-- or use a text message -->
+        <!-- <p>Loading...</p> -->
+    </div>
 
-
-
+    <table id="studentTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tag</th>
+            <th>Date</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table body will be dynamically populated using jQuery -->
+        </tbody>
+    </table>
     <script src="script.js"></script>
 </body>
 </html>
